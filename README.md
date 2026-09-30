@@ -111,6 +111,8 @@ The original image is **never modified**. It stays in the upload bucket, and a s
 | `POST` | `/upload` | `upload` | Returns an image ID and a presigned upload URL |
 | `GET` | `/image/{id}` | `get_image` | Returns the metadata and a presigned thumbnail URL |
 
+ ![ApiGtw](screenshots/api-gtw.png)
+
 ---
 
 ## Design Notes
@@ -134,26 +136,7 @@ The original image is **never modified**. It stays in the upload bucket, and a s
 
 ## Project Structure
 
-```
-serverless-image-processing-pipeline/
-│
-├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   └── app.js
-│
-├── lambda/
-│   ├── upload/
-│   │   └── lambda_function.py
-│   ├── image_processor/
-│   │   └── lambda_function.py
-│   └── get_image/
-│       └── lambda_function.py
-│
-├── screenshots/
-├── docs/
-└── README.md
-```
+ ![Architecture](screenshots/projectArchitecture.png)
 
 ---
 
