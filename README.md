@@ -136,7 +136,7 @@ The original image is **never modified**. It stays in the upload bucket, and a s
 
 ## Project Structure
 
- ![Architecture](screenshots/projectArchitecture.png)
+ ![ProjectStructure](screenshots/projectStructure.png)
 
 ---
 
