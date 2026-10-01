@@ -37,34 +37,7 @@ Thumbly is the event-driven project in my AWS portfolio. It shows how a file upl
 
 The frontend is a static site hosted on S3 and delivered globally over HTTPS through CloudFront. The backend has two flows.
 
-**Upload and processing**
-
-```
- Browser ──(1) request upload URL──▶ API Gateway ──▶ upload Lambda
-    │                                                     │
-    │◀────────────(2) image ID + presigned URL────────────┘
-    │
-    └─(3) PUT image ──▶ S3 upload bucket
-                              │
-                              │ (4) S3 event trigger
-                              ▼
-                     image_processor Lambda (Pillow)
-                        │                  │
-            (5) 300×300 thumbnail      (6) metadata
-                        ▼                  ▼
-               S3 processed bucket      DynamoDB
-```
-
-**Retrieving a result**
-
-```
- Browser ──(1) request image by ID──▶ API Gateway ──▶ get_image Lambda
-    ▲                                                   │           │
-    │                                       (2) read metadata   (3) presign
-    │                                                   ▼           ▼
-    │                                               DynamoDB   S3 processed bucket
-    └────────(4) metadata + presigned thumbnail URL──────────────────┘
-```
+ ![Architecture](screenshots/thumblyArchitecture.png)
 
 ---
 
