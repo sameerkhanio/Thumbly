@@ -37,7 +37,7 @@ Thumbly is the event-driven project in my AWS portfolio. It shows how a file upl
 
 The frontend is a static site hosted on S3 and delivered globally over HTTPS through CloudFront. The backend has two flows.
 
- ![Architecture](screenshots/thumblyArchitecture.png)
+ ![Architecture](screenshots/thumbly-architecture.png)
 
 ---
 
